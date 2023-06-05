@@ -40,7 +40,7 @@ export default function Product() {
                                     </h3>
                                     <p className="text-sm font-medium text-gray-900 text-start"><span className='text-md font-bold '>Price:</span> {productList?.price}</p>
                                     <div className='text-start'>
-                                        <p className="mt-1 text-sm text-gray-500 ">{productList?.description.slice(0, 200)} </p>
+                                        <p className="mt-1 text-sm text-gray-500 ">{productList?.description.slice(0, 200) + "..."} </p>
                                         <a href="#" className='text-sm text-blue-400 underline'>Read More</a>
                                     </div>
                                     <button class="flex-start mt-10 bg-cyan-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
