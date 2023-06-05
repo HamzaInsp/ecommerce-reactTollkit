@@ -6,7 +6,7 @@ const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
   { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Contact', href: '#' },
 ]
 
 export default function HeroSection() {
@@ -111,7 +111,7 @@ export default function HeroSection() {
           />
         </div>
         <div className="flex">
-          <div className="flex-1 max-w-4xl py-24 sm:py-32 lg:py-40 ">
+          <div className="flex-1 max-w-4xl py-24 sm:py-32 lg:pt-14 lg:pb-12">
             <div className="text-left">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Data to enrich your online business
@@ -133,9 +133,9 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className='flex-1 max-w-2xl py-24 sm:py-32 lg:pt-14 lg:pb-15'>
+          <div className='flex-1 max-w-2xl py-24 sm:py-32 lg:pt-14 lg:pb-12'>
             <img
-              className="max-w-45-xlg"
+              className="max-w-45-xlg m-auto"
               src={HeroImg}
               // src="https://i.pinimg.com/originals/6a/e7/1e/6ae71e1a026037c3ff70d389701e2893.jpg"
               alt="hero image"
