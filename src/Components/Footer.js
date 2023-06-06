@@ -2,30 +2,23 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <div className='relative isolate'>
-            <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-                <div
-                    className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[50.1875rem]"
-                    style={{
-                        clipPath:
-                            'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                    }}
-                />
-            </div>
+        <div className=''>
+           
             <footer className="text-white-600 body-font bg-gray-600">
                 <div className="container px-5 py-8 mx-auto">
                     <div className="flex flex-wrap md:text-left text-center order-first">
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4 ">
                             <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+                            <div className='border-b-4 border-gray-100'></div>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">First Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:underline">Men Clothes</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Second Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:underline">Women Clothes</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Third Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:underline">Electronics</a>
                                 </li>
                                 <li>
                                     <a className="text-gray-100 hover:text-white hover:underline">Fourth Link</a>

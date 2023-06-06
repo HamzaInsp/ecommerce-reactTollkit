@@ -40,7 +40,7 @@ export default function Product() {
                                             {productList?.title}
                                         </a>
                                     </h3>
-                                    <p className="text-sm font-medium text-gray-900 text-start"><span className='text-md font-bold '>Price:</span> {productList?.price}</p>
+                                    <p className="text-sm font-medium text-gray-900 text-start"><span className='text-md font-bold '>Price:</span> {"$" + productList?.price}</p>
                                 </div>
                                 <div className='text-start hidden'>
                                     <p className="mt-1 text-sm text-gray-500">{productList?.description.slice(0, 150) + " " }
