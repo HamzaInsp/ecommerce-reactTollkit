@@ -8,59 +8,58 @@ export default function Footer() {
                 <div className="container px-5 py-8 mx-auto">
                     <div className="flex flex-wrap md:text-left text-center order-first">
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4 ">
-                            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
-                            <div className='border-b-4 border-gray-100'></div>
+                            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3 border-double border-b-4 border-cyan-300 w-16">CATEGORIES</h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Men Clothes</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Men Clothes</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Women Clothes</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Women Clothes</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Electronics</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Electronics</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Fourth Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Fourth Link</a>
                                 </li>
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+                            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3 border-double border-b-4 border-cyan-300 w-16">CATEGORIES</h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">First Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">First Link</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Second Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Second Link</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Third Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Third Link</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Fourth Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Fourth Link</a>
                                 </li>
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+                            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3 border-double border-b-4 border-cyan-300 w-16">CATEGORIES</h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">First Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">First Link</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Second Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Second Link</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Third Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Third Link</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-100 hover:text-white hover:underline">Fourth Link</a>
+                                    <a className="text-gray-100 hover:text-white hover:border-b-2 border-cyan-300 cursor-pointer">Fourth Link</a>
                                 </li>
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">SUBSCRIBE</h2>
+                            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3 border-double border-b-4 border-cyan-300 w-16">SUBSCRIBE</h2>
                             <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
                                 <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
                                     <label for="footer-field" className="leading-7 text-sm text-white">Placeholder</label>
