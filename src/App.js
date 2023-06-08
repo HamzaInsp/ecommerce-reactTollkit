@@ -8,18 +8,21 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Dashboard from './Components/Dashboard';
 import Cart from './Components/Cart';
 import RootLayout from './Components/RootLayout';
+import Contact from './Components/pages/Contact';
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={<RootLayout />}>
-      <Route index element={<Dashboard />}></Route>
+      {/* <Route index element={<Dashboard />}></Route> */}
+      <Route index element={<HeroSection />}></Route>
       <Route path='/cart' element={<Cart />}></Route>
+      <Route path='/contact' element={<Contact />}></Route>
     </Route>
   ))
   return (
     <div className="App">
-      <HeroSection />
-      <Product />
+      {/* <HeroSection /> */}
+      {/* <Product /> */}
       <RouterProvider router={router}/>
     </div>
   );

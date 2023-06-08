@@ -1,7 +1,7 @@
 import React from 'react'
-import NavBar from './pages/NavBar'
+import NavBar from './NavBar'
 
-export default function Cart() {
+export default function Contact() {
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
       <div
@@ -17,7 +17,9 @@ export default function Cart() {
         />
       </div>
       <NavBar />
-      <h1>Cart</h1>
+      <h1>
+        Contact page
+      </h1>
     </div>
   )
 }

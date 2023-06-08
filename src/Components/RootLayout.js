@@ -1,7 +1,13 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 export default function RootLayout() {
   return (
-    <div>RootLayout</div>
+    <div>
+      {/* <h1>ROOTlAYOUT</h1> */}
+      <main>
+        <Outlet />
+      </main>
+    </div>
   )
 }
