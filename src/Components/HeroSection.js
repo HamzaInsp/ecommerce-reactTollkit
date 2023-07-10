@@ -9,7 +9,7 @@ export default function HeroSection() {
 
   return (
     <div className="bg-white">
-      
+
       {/* narbar section   */}
       <NavBar />
 
@@ -72,6 +72,7 @@ export default function HeroSection() {
           />
         </div>
       </div>
+      
       <Product />
 
     </div>

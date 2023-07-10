@@ -27,6 +27,7 @@ export default function NavBar() {
                             />
                         </a>
                     </div>
+
                     <div className="flex lg:hidden">
                         <button
                             type="button"
@@ -44,15 +45,21 @@ export default function NavBar() {
                             </a>
                         ))}
                     </div>
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <a href="/cart" className='pr-3'>
-                            <UilShoppingBag size="25" color="#61DAFB" />
-                        </a>
+                    <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:align-center">
+                        <div className='relative flex'>
+                            <a href="/cart" className='pr-3'>
+                                <UilShoppingBag size="28" color="#61DAFB" />
+                            </a>
+                            <div className='absolute -top-1 left-4 right-0 w-5 h-5 bg-red-400 rounded-2xl'>
+                                <span className='absolute -top-0.5 left-0 right-0 bottom-0 text-white'>0</span>
+                            </div>
+                        </div>
                         <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                             Log in <span aria-hidden="true">&rarr;</span>
                         </a>
                     </div>
                 </nav>
+
                 <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
 
                     <div className="fixed inset-0 z-50" />
@@ -67,6 +74,7 @@ export default function NavBar() {
                                     alt=""
                                 />
                             </a>
+
                             <button
                                 type="button"
                                 className="-m-2.5 rounded-md p-2.5 text-gray-700"

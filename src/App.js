@@ -23,7 +23,9 @@ function App() {
     <div className="App">
       {/* <HeroSection /> */}
       {/* <Product /> */}
-      <RouterProvider router={router}/>
+      <RouterProvider
+        router={router}
+      />
     </div>
   );
 }
