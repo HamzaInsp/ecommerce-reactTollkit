@@ -1,7 +1,11 @@
 import React from 'react'
 import NavBar from './pages/NavBar'
+import { useSelector } from 'react-redux'
 
 export default function Cart() {
+  const cartItems = useSelector((state) => state.cart)
+  console.log(cartItems, "cart------")
+  
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
       <div
@@ -18,6 +22,7 @@ export default function Cart() {
       </div>
       <NavBar />
       <h1>Cart</h1>
+      {JSON.stringify(cartItems)}
     </div>
   )
 }

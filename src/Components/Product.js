@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Footer from './Footer'
-
+import Footer from './Footer';
+import {useDispatch} from 'react-redux';
+import {add} from '../store/cartSlice'
 
 export default function Product() {
+
+    const dispatch = useDispatch()
 
     const [products, setProducts] = useState("")
 
@@ -15,6 +18,11 @@ export default function Product() {
 
         fetchProduct()
     }, [])
+
+    const addToCard = (productList) => {
+        // dispatch an add action 
+        dispatch(add(productList))
+    }
 
     return (
         <div className="bg-white">
@@ -43,14 +51,15 @@ export default function Product() {
                                     <p className="text-sm font-medium text-gray-900 text-start"><span className='text-md font-bold '>Price:</span> {"$" + productList?.price}</p>
                                 </div>
                                 <div className='text-start hidden'>
-                                    <p className="mt-1 text-sm text-gray-500">{productList?.description.slice(0, 150) + " " }
+                                    <p className="mt-1 text-sm text-gray-500">{productList?.description.slice(0, 150) + " "}
                                         <a href="#" className="text-sm font-semibold text-blue-400 py-2 ">
                                             Read More <span aria-hidden="true">→</span>
                                         </a>
                                     </p>
                                 </div>
                                 <div className='py-4 '>
-                                    <button class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
+                                    <button className="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded"
+                                        onClick={() => addToCard(productList)}>
                                         Add To Card
                                     </button>
                                 </div>
