@@ -14,7 +14,6 @@ const navigation = [
 
 export default function NavBar() {
     const cartProducts = useSelector((state) => state.cart)
-    console.log(cartProducts, "cartProducts- hamzaaaaa----")
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 

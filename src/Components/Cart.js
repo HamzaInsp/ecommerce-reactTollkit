@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from './pages/NavBar'
 import { useSelector } from 'react-redux'
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cart)
-  console.log(cartItems, "cart------")
-  
+  console.log(cartItems, "current otem")
+  const [updateCartItem, setUpdateCartItems] = useState('')
+
+  const removeItem = (itemList) => {
+    console.log(itemList, "REMOVE")
+    let newList = cartItems.filter((cartList) => cartList.id !== itemList.id)
+    setUpdateCartItems(newList)
+  }
+
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
       <div
@@ -22,7 +29,51 @@ export default function Cart() {
       </div>
       <NavBar />
       <h1>Cart</h1>
-      {JSON.stringify(cartItems)}
+
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8">
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          {cartItems && cartItems?.map((itemList, i) => (
+            <div key={i} className="group shadow-xl shadow-cyan-100/50 rounded-2xl flex flex-col justify-around">
+              <div className=" overflow-hidden rounded-md group-hover:opacity-75 lg:h-80">
+                <img
+                  src={itemList?.image}
+                  alt={itemList?.category}
+                  className="h-full w-11/12 lg:h-full lg:w-11/12 m-auto"
+                />
+              </div>
+              <div className="mt-4 px-2">
+                <div>
+                  <h3 className="text-md font-bold text-gray-700 text-start pb-2">
+                    <a href="#">
+                      <span aria-hidden="true" className="" />
+                      {itemList?.title}
+                    </a>
+                  </h3>
+                  <p className="text-sm font-medium text-gray-900 text-start">
+                    <span className='text-md font-bold '>Price:</span>
+                    {"$" + itemList?.price}
+                  </p>
+                </div>
+                <div className='text-start hidden'>
+                  <p className="mt-1 text-sm text-gray-500">{itemList?.description.slice(0, 150) + " "}
+                    <a href="#" className="text-sm font-semibold text-blue-400 py-2 ">
+                      Read More <span aria-hidden="true">→</span>
+                    </a>
+                  </p>
+                </div>
+                <div className='py-4 '>
+                  <button className="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => removeItem(itemList)}>
+                    Remove Item
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+          
+        </div>
+      </div>
+
     </div>
   )
 }

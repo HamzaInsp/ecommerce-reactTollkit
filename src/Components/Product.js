@@ -44,7 +44,6 @@ export default function Product() {
                                     <h3 className="text-md font-bold text-gray-700 text-start pb-2">
                                         <a href="#">
                                             <span aria-hidden="true" className="" />
-                                            {/* {productList?.category} */}
                                             {productList?.title}
                                         </a>
                                     </h3>
