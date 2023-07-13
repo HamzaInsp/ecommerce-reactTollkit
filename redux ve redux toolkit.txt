@@ -1,6 +1,6 @@
 redux vs redux toolkit
 
-1) when we talk about old redux. so it's not much orgazied lots of repetition was there and lots of code was reapting multiple time and manual configration was required for so many thing. but on the other hand Redux Toolkit they have improvised everthing over there. basically it is much more orginized and much more fit and clear and most of the things are automatically configure for you. so you dont need to write so many things again and again as we did in simple redux. its improved your code 
+1) when we talk about old redux. so it's not much orgazied lots of repetition was there and lots of code was reapting multiple time and manual configration was required for so many thing. but on the other hand Redux Toolkit they have improvised everthing over there. basically it is much more orginized and much more fit and clear and most of the things are automatically configure for you. so you dont need to write so many things again and again as we did in simple redux. its improved your code.
 
 2) old Redux: as we know that reduc is handle synchronous but if you want to handle something asynchronous then you have to use thunks middlewarew and lots of code need to write to handle asynchronous request and handling error code was aslo manual. on the other hand in the redux toolkit its already integrated for you and redux toolkit give u one method that is createAsyncThunk to make asynchonous requests 
 
@@ -15,6 +15,17 @@ Now we create a store. the store will actually bring your action and reducers to
 
 - redux tolkit introduce a configureStore which basicllay do lots of configration for you ypou don't need to do anything manually enabling the redux tool extension redux tool extension very powerful for redux debugging. but is redux we have to configure it manually.
 we have created our redux, store and components. but these are not comunicating each other. Now we provide our state that we have to create in the redux to my components pages or i want to update the state for my component to redux with the help of dispatching action. so all this will be possible once my components know about the store. so the next step is configuring the store to the root component. and that will be posibile to "Provider" basically Provider is the Higher order component what we will wrap the react application into Provider. that react application aware to the entire redux state.
+
+now let see how we make api call with the help of redux toolkit.
+when we talk about redux, so redux is basically used to handle the synchronous behaviore that redux dont know how to deal with the asynchronous logic but if you want to handle any of the asynchronous operation in redux there we use middleware and redux thunk one of the most popular middleware that is used to perform aysnchronous operation in redux toolkit redux thunk is included by defauld.
+
+now let see how we make api call with the help of redux middleware.
+
+
+
+
+
+
 
 
 

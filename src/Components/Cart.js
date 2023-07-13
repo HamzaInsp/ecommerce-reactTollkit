@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import NavBar from './pages/NavBar'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { remove } from '../store/cartSlice'
 
 export default function Cart() {
-  const cartItems = useSelector((state) => state.cart)
-  console.log(cartItems, "current otem")
-  const [updateCartItem, setUpdateCartItems] = useState('')
+  const dispatch = useDispatch()
+  const productItems = useSelector((state) => state.cart)
+  const [cartItems, setCartItems] = useState(productItems)
 
-  const removeItem = (itemList) => {
-    console.log(itemList, "REMOVE")
-    let newList = cartItems.filter((cartList) => cartList.id !== itemList.id)
-    setUpdateCartItems(newList)
+  const removeItem = (id) => {
+    let newList = cartItems.filter((cartList) => cartList.id !== id)
+    setCartItems(newList)
+    dispatch(remove(id))
   }
 
   return (
@@ -62,8 +63,8 @@ export default function Cart() {
                   </p>
                 </div>
                 <div className='py-4 '>
-                  <button className="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={() => removeItem(itemList)}>
+                  <button className="bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => removeItem(itemList.id)}>
                     Remove Item
                   </button>
                 </div>

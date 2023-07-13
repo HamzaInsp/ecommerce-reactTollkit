@@ -14,7 +14,7 @@ const navigation = [
 
 export default function NavBar() {
     const cartProducts = useSelector((state) => state.cart)
-
+    
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
