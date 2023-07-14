@@ -21,6 +21,46 @@ when we talk about redux, so redux is basically used to handle the synchronous b
 
 now let see how we make api call with the help of redux middleware.
 
+so create another slice whcih is productSlice. we cannot write an API logic within reducers portion because slice dont know how to handle the asynchronous operation
+so we will use thunk action creator
+
+here is the code of thunk but this code is simple redux thunk.
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+    data: []
+};
+console.log(initialState, "----thunk")
+
+const productSlice = createSlice({
+
+    name: "products",
+    initialState,
+    reducers: {
+        fetchProducts(state, action) {
+            state.data = action.payload
+        }
+    }
+})
+
+export const { fetchProducts } = productSlice.actions;
+export default productSlice.reducer;
+
+//we call all products API here in thunk create 
+export function getProducts() {
+    return (
+        async function getProductsThunk(dispatch, getState) {
+            const data = await fetch('https://fakestoreapi.com/products')
+            const result = await data.json()
+            dispatch(fetchProducts(result))
+        }
+    )
+}
+
+redux toolkit provide the better way of handling asynchronous operation with the help of create async thunk. we just need little changes in slice such as:
+
+in reduc toolkit we have reducers to handle the synchronous task if we have something asynchronous then we have the one more option here that is extraReducers. this extraReducers has a builder and it will be a object now we dont need to write anything in the reducers. now we have to add the cases in extraReducers cases like promisses has 3 stages like pending, fulfill, rejected. so all of these three stages now we can handle in the extraReducers
+
 
 
 

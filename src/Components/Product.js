@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import Footer from './Footer';
-import {useDispatch} from 'react-redux';
-import {add} from '../store/cartSlice'
+import { useDispatch, useSelector } from 'react-redux';
+import { add } from '../store/cartSlice'
+import { getProducts } from '../store/productSlice';
 
 export default function Product() {
 
     const dispatch = useDispatch()
-
-    const [products, setProducts] = useState("")
+    const { data: products } = useSelector(state => state.products)
+    // const [products, setProducts] = useState("")
 
     useEffect(() => {
-        const fetchProduct = async () => {
-            const productResponse = await fetch('https://fakestoreapi.com/products')
-            const productsData = await productResponse.json()
-            setProducts(productsData)
-        }
 
-        fetchProduct()
+        // const fetchProduct = async () => {
+        //     const productResponse = await fetch('https://fakestoreapi.com/products')
+        //     const productsData = await productResponse.json()
+        //     setProducts(productsData)
+        // }
+        // fetchProduct()
+
+        // dispatch an action fetch product from thunk basically we call the above same api into thunk creator
+        dispatch(getProducts())
+
     }, [])
 
     const addToCard = (productList) => {
